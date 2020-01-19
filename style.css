@@ -1,0 +1,139 @@
+@font-face {
+  font-family: "HelveticaBlack";
+  src: url("./assets/HelveticaBlack.woff2")
+    format("woff2");
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "HelveticaBlack", helvetica, arial, sans-serif;
+  font-weight: 900;
+  text-align: center;
+  color: red;
+
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body > * {
+  margin: 0 auto;
+  padding-bottom: 5vw;
+  position: relative;
+}
+
+input {
+  -moz-background-clip: padding;
+  -ms-background-clip: padding-box;
+  -o-background-clip: padding-box;
+  -webkit-background-clip: padding;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-clip: padding-box;
+
+  font-family: "HelveticaBlack", helvetica, arial, sans-serif;
+  font-weight: 900;
+  line-height: 0.4;
+  text-align: center;
+  vertical-align: middle;
+  color: red;
+
+  width: 100vw;
+  height: 0.9em;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.text {
+  text-transform: uppercase;
+  font-size: 8vw;
+  white-space: nowrap;
+  letter-spacing: -0.45rem;
+  transform: scale(1.1, 1);
+  margin-top: -0.06em;
+  line-height: 0.8;
+}
+
+.outline {
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 0.1vw;
+  -webkit-text-stroke-color: red;
+}
+
+.outline:last-child {
+  position: relative;
+}
+
+.outline:last-child::after {
+  position: absolute;
+  transform-origin: right center;
+  transform: scale(0.9, 1) translate(-18vw, 9vw);
+  
+  text-align: right;
+  width: 1vw;
+  text-transform: none;
+  font-size: 2vw;
+  letter-spacing: 0rem;
+  content: "Have a Nice Day";
+  
+  -webkit-text-fill-color: red;
+  -webkit-text-stroke-width: 0;
+  -webkit-text-stroke-color: none;
+}
+
+@media (min-width: 1440px) {
+  .text {
+    font-size: 16vh;
+  }
+  
+  .outline:last-child::after {
+    font-size: 4vh;
+    transform: scale(0.9, 1) translate(-37vh, 17vh);
+  }
+}
+
+@media (max-width: 1200px) {
+  .text {
+    font-size: 10vw;
+  }
+
+  .outline:last-child::after {
+    font-size: 2.5vw;
+    transform: scale(0.9, 1) translate(-23vw, 10vw);
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .text {
+    font-size: 12vw;
+  }
+  
+  .outline:last-child::after {
+    font-size: 3vw;
+    transform: scale(0.9, 1) translate(-27vw, 12vw);
+  }
+}
+
+@media (max-width: 800px) {
+  .outline:last-child::after {
+    font-size: 3vw;
+    transform: scale(0.9, 1) translate(-27vw, 12vw);
+  }
+}
+
+@media (max-width: 512px) {
+  .text {
+    letter-spacing: -0.3rem;
+  }
+  .outline {
+    -webkit-text-stroke-width: 0.2vw;
+  }
+}
